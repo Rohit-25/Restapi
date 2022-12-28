@@ -145,7 +145,7 @@ app.get('/proddetail/earrings',(req,res) => {
     if(item_id ){
         query={"item_id":item_id }
     }
-    db.collection('earrings').find(query).toArray((err,result)=>{
+    db.collection('earring').find(query).toArray((err,result)=>{
         if(err) throw err;
         res.send(result)
     })
@@ -156,7 +156,7 @@ app.get('/proddetail/pendents',(req,res) => {
     if(item_id ){
         query={"item_id":item_id }
     }
-    db.collection('pendents').find(query).toArray((err,result)=>{
+    db.collection('pendants').find(query).toArray((err,result)=>{
         if(err) throw err;
         res.send(result)
     })
