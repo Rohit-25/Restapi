@@ -13,7 +13,7 @@ let bodyParser = require('body-parser');
 let db;
 
 //middleware
-app.use(cors());
+// app.use(cors());
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(bodyParser.json())
 app.use((req, res, next) => {
