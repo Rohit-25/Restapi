@@ -151,7 +151,7 @@ app.get('/proddetail/coins',(req,res) => {
     }
     db.collection('coins').find(query).toArray((err,result)=>{
         if(err) throw err;
-        res.send(result)
+        res.send(result )
     })
 })
 app.get('/proddetail/earrings',(req,res) => {
@@ -198,7 +198,7 @@ app.get('/orders',(req,res) => {
 app.delete('/deleteOrder/:id',(req,res) => {
     let item_id= Number(req.params.id);
     // let item_id = mongo.ObjectId(req.params.id);
-    db.collection('cart').deleteOne({item_id},(err,result) => {
+    db.collection('cart').delete({item_id},(err,result) => {
         if(err) throw err;
         res.send('Order Deleted')
     })
