@@ -47,11 +47,11 @@ https://zany-newt-toga.cyclic.app/cart
 # List of Order (get)
 http://localhost:2500/orders
 
+
+post with all details
+https://zany-newt-toga.cyclic.app/orderwithuser
 # Delete Order   (delete)
-
-
-
-# update the order
 
 *Fifth Page*
  # List of order wrt to email(get)
+https://zany-newt-toga.cyclic.app/finalorders

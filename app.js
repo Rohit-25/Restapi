@@ -215,6 +215,19 @@ app.post('/orderplaced',(req,res) => {
     })
 })
 
+app.post('/orderwithuser',(req,res) => {
+    console.log(req.body);
+    db.collection('finalorders').insert(req.body,(err,result) => {
+        if(err) throw err;
+        res.send('orderplaced')
+    })
+})
+app.get('/finalorders',(req,res) => {
+    db.collection('finalorders').find().toArray((err,result)=>{
+        if(err) throw err;
+        res.send(result)
+    })
+})
 
 
 
